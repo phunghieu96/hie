@@ -1,0 +1,1256 @@
+{
+	"info": {
+		"_postman_id": "97634bb9-a6de-43d7-8a9f-3008deb983f7",
+		"name": "MASTERDEV - online bidding project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14422235"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login as admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"adminadmin\",\r\n\t\t\"password\": \"adminadmin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/auth/login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login as user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"nguoidung3\",\r\n\t\t\"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/auth/login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"nguoidung2\",\r\n\t\t\"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/auth/logout",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"thanhng260588\",\r\n\t\t\"password\": \"12345678\",\r\n\t\t\"email\": \"thanhng260588@gmail.com\",\r\n\t\t\"name\": \"thanhthanh\",\r\n\t\t\"role\": {\r\n\t\t\t\"id\": 2\r\n\t\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/auth/signup",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "put myprofile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"name\": \"thanh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/profiles/myProfile",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"profiles",
+								"myProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change my password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"currentPassword\": \"123456789\",\r\n\t\t\"newPassword\": \"123456789\",\r\n\t\t\"confirmedNewPassword\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/profiles/myProfile/changePassword",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"profiles",
+								"myProfile",
+								"changePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get myprofile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/profiles/myProfile",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"profiles",
+								"myProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get profile by user id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/profiles/9",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"profiles",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get auctions by user id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/profiles/6/auctions",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"profiles",
+								"6",
+								"auctions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get my notifications",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "page",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "page_size",
+								"value": "10",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/profiles/myNotifications",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"profiles",
+								"myNotifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get interested auctions by user id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/profiles/myInterestedAuctions",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"profiles",
+								"myInterestedAuctions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get won auctions by user id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/profiles/8/wonAuctions",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"profiles",
+								"8",
+								"wonAuctions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "get all auctions (admin)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "page",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "page_size",
+								"value": "10",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/admin/auctions",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"auctions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all profiles (admin)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "page",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "page_size",
+								"value": "7",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/admin/profiles?status=",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"profiles"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put auction (admin)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"status\": \"OPENING\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/admin/auctions/57",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"auctions",
+								"57"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin approve auction (admin)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/admin/auctions/57/approve",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"auctions",
+								"57",
+								"approve"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ban profile (admin)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"status\": \"ACTIVE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/admin/profiles/6",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"profiles",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete auction by id (admin)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/admin/auctions/22",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"auctions",
+								"22"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auctions",
+			"item": [
+				{
+					"name": "get all opening auctions for home screen",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "page",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "page_size",
+								"value": "4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/auctions?status=OPENING",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auctions"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "OPENING"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get top trending auctions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "page",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "page_size",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/auctions/topTrending",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auctions",
+								"topTrending"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all my auctions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "page",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "page_size",
+								"value": "10",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/profiles/myAuctions",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"profiles",
+								"myAuctions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get auction by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "page",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "page_size",
+								"value": "2",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/auctions/96",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auctions",
+								"96"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post auction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"description\": \"bai dau gia test\",\n\t\"timeStart\": \"2022-07-18T10:53:00\",\n\t\"timeEnd\": \"2022-07-19T10:53:01\",\n\t\"priceStart\": 100000,\n\t\"priceStep\": 100000,\n\t\"category\": {\n\t\t\"id\": 2\n\t},\n\t\"item\": {\n\t\t\"name\": \"ban phim filco leopold\",\n\t\t\"description\": \"filco filco leopold\",\n\t\t\"amount\": 1\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/auctions",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auctions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put auction",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"timeStart\": \"2022-07-12T19:50:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/auctions/34",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auctions",
+								"34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "submit  auction pending",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/auctions/35/submit",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auctions",
+								"35",
+								"submit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete auction by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/auctions/27",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auctions",
+								"27"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bids",
+			"item": [
+				{
+					"name": "post bid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"price\": 123123\n}\t\t\t\t\t\t\t",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/auctions/71/bids",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auctions",
+								"71",
+								"bids"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get alls bid by auction id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "page",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "page_size",
+								"value": "10",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/auctions/96/bids",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auctions",
+								"96",
+								"bids"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "items",
+			"item": [
+				{
+					"name": "post item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"ban phim filco leopold\",\n\t\"description\": \"filco filco leopold\",\n\t\"amount\": 1,\n\t\"auction\": {\n\t\t\"id\": 39\n\t},\n\t\"itemImages\": [\n\t\t{\n\t\t\t\"imageUrl\": \"https://scontent.fhan15-1.fna.fbcdn.net/v/t39.30808-6/293313076_1480051099131980_4706168332655760610_n.jpg?stp=dst-jpg_p720x720&_nc_cat=106&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=e9BjlXX_trUAX9TFRr-&_nc_ht=scontent.fhan15-1.fna&oh=00_AT-itj6mSntl2cHRo4x1mgbgMR5YOHzS31y6PaLxQNG4oQ&oe=62D95B2B\"\n\t\t},\n\t\t{\n\t\t\t\"imageUrl\": \"https://scontent.fhan15-1.fna.fbcdn.net/v/t39.30808-6/293313076_1480051099131980_4706168332655760610_n.jpg?stp=dst-jpg_p720x720&_nc_cat=106&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=e9BjlXX_trUAX9TFRr-&_nc_ht=scontent.fhan15-1.fna&oh=00_AT-itj6mSntl2cHRo4x1mgbgMR5YOHzS31y6PaLxQNG4oQ&oe=62D95B2B\"\n\t\t}\n\t]\n}\t\t\t\t\t\t\t",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/items",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"itemImages\": [\n\t\t\t\t{\n\t\t\t\t\t\"id\": 19,\n\t\t\t\t\t\"imageUrl\": \"https://res.cloudinary.com/metanoia/image/upload/v1658223217/onlinebiddingproject/dtbzh9dnftdr5yramjge.jpg\",\n\t\t\t\t\t\"publicId\": \"onlinebiddingproject/dtbzh9dnftdr5yramjge\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"id\": 18,\n\t\t\t\t\t\"imageUrl\": \"https://res.cloudinary.com/metanoia/image/upload/v1658223227/onlinebiddingproject/kypoz8diely90al0dt0f.jpg\",\n\t\t\t\t\t\"publicId\": \"onlinebiddingproject/kypoz8diely90al0dt0f\"\n\t\t\t\t}\n\t\t\t]\n}\t\t\t\t\t\t\t",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/items/55",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"items",
+								"55"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post item image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imageUrl\": \"https://res.cloudinary.com/metanoia/image/upload/v1658223227/onlinebiddingproject/kypoz8diely90al0dt0f.jpg\",\n\t\"publicId\": \"onlinebiddingproject/kypoz8diely90al0dt0f\"\n}\t\t\t\t\t\t\t",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/items/55/itemImages",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"items",
+								"55",
+								"itemImages"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reports",
+			"item": [
+				{
+					"name": "post report",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"description\": \"thang nay sui bid\",\n\t\"userReporter\": {\n\t\t\"id\": 6\n\t},\n\t\"userReported\": {\n\t\t\"id\": 8\n\t},\n\t\"reportImages\": [\n\t\t{\n\t\t\t\"imageUrl\": \"adu.jpg\"\n\t\t},\n\t\t{\n\t\t\t\"imageUrl\": \"adu2.jpg\"\n\t\t}\n\t]\n}\t\t\t\t",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/reports",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"reports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post report image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imageUrl\": \"1231\"\n\n}\t\t\t\t\t\t\t",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/reports/1/reportImages",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"reports",
+								"1",
+								"reportImages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all reports (admin)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "page",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "page_size",
+								"value": "10",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/admin/reports?result=",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"reports"
+							],
+							"query": [
+								{
+									"key": "result",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "judge report (admin)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"result\": \"REJECTED\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/v1/admin/reports/22/results",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"reports",
+								"22",
+								"results"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
